@@ -1,0 +1,7 @@
+// Useful Mixin Prefixes
+@mixin prefixes($prop, $value, $prefixes: ()) {
+	@each $prefix in $prefixes {
+		#{'-' + $prefix + '-' + $prop}: $value;
+	}
+	#{$prop}: $value;
+}

@@ -1,0 +1,134 @@
+// Header (Main menu) Style
+.nav {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   background: $whiteColor;
+   .header {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-auto-rows: minmax(100px, auto);
+      align-items: center;
+      margin: auto;
+      -webkit-transition: height .3s ease;
+      transition: height .3s ease;
+      @media #{$maxMobile} {
+         height: 100px;  
+      }
+      @media #{$minSmall} {
+         width: 800px;
+         height: 160px;
+         padding: 0 2rem;
+      }
+      @media #{$maxMiniSmall} {
+         color: red;
+      }
+         .brand {
+            grid-column: 1 / 4;
+            @media #{$maxMiniSmall} {
+               grid-column: 2 / 3 !important;
+            }
+            @media #{$maxMobile} {
+               grid-column: 2 / 4;   
+            }   
+            a {
+               display: flex;
+               align-items: center;
+               color: rgba(0,0,0,.6);
+               font-weight: 700;
+               text-decoration: none;
+               .favicon {
+                  height: 23px;
+                  width: 23px;
+                  min-width: 23px;
+                  margin-right: 1rem;
+                  @media #{$maxMobile} {
+                     min-width: 20px;
+                     height: 20px;
+                     width: 20px;
+                     margin-right: .7rem;
+                  }
+               }
+               .text {
+                  display: block;
+                  font-size: 1.15rem;
+                  font-weight: 500;
+                  @media #{$maxMiniSmall} {
+                     display: none;
+                  }
+                  @media #{$maxMobile} {
+                     font-size: .9rem;
+                  }
+               }
+            }
+         }
+         .links {
+            grid-column: 4 / 12;
+            @media #{$maxMiniSmall} {
+               grid-column: 3 / 11 !important;
+            }
+            @media #{$maxMobile} {
+               grid-column: 5 / 11;
+            }
+            ul {
+               list-style: none;
+               justify-content: flex-end;
+               display: flex;
+               margin: 0;
+               padding: 0;
+               @media #{$maxMobile} {
+                  justify-content: center;
+               }
+               a {
+                  margin: 0 .5rem;
+                  padding: 1rem;
+                  text-decoration: none;
+                  color: rgba(0, 0, 0, 0.6);
+                  @media #{$maxMiniSmall} {
+                     font-size: .8rem !important;
+                  }
+                  @media #{$maxMobile} {
+                     margin: 0;
+                     font-size: .9rem;
+                  }
+                  &:hover {
+                     color: $headingColor;
+                     background-color: #bbbebe33;
+                     border-radius: 7px;
+                  }
+               }
+            }
+         }
+         .swt {
+            grid-column: 12 / 13;
+            display: flex;
+            justify-content: flex-end;
+            @media #{$maxMobile} {
+               grid-column: 11 / 12;
+            }
+            .dark-switcher,
+            .light-switcher {
+               background-color: transparent;
+               border: 0;
+               padding: 0;
+               cursor: pointer;
+               outline: none;
+                  .theme-color {
+                     height: 22px;
+                     width: 22px;
+                     min-width: 22px;
+                  }
+            }
+         }
+   }
+}
+
+// Used when menu scrolled
+.nav-scroll {
+   box-shadow: 1px 2px 18px rgba(0,0,0,.1);
+   .header {
+      height: 60px;
+      grid-auto-rows: minmax(60px, auto);
+   }
+}

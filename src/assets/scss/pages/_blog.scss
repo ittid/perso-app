@@ -1,0 +1,78 @@
+.article_page {
+   .content {
+      margin: 0 auto !important;
+      h1 {
+         font-size: 2.4em;
+         line-height: 1.5;
+         margin: 0 0 1em 0;
+         @media #{$maxMobile} {
+            text-align: center;
+         }
+      }
+      .categories {
+         display: flex;
+         margin: .4em 0 2em;
+         justify-content: flex-start;
+         @media #{$maxMobile} {
+            justify-content: center;
+         }
+         @media #{$maxMiniSmall} {
+            display: block;
+         }         
+         a {
+            font-size: 0.85rem;
+            padding: 0.5rem 0.75rem;
+            background: #ebf1fe;
+            border-radius: 6px;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: $linkColor;
+            cursor: pointer;
+            text-decoration: none;
+            @media #{$maxMiniSmall} {
+               display: block;
+               text-align: center;
+            } 
+            &:hover {
+               border: 1px solid $linkColor;
+            }
+         }
+      }
+      .search_container {
+         display: grid;
+         grid-template-columns: repeat(12, 1fr);
+         align-items: center;
+         .search_ipt {
+            grid-column: 1 / 8;
+            border: 2px solid #eee;
+            font-size: 16px;
+            min-height: 50px;
+            padding: 0 10px;
+            border-radius: 4px;
+            @media #{$maxMobile} {
+               grid-column: 3 / 10;
+            }
+            @media #{$maxMiniSmall} {
+               grid-column: span 12;
+            }    
+         }
+         .article_length {
+            grid-column: 8 / 9;
+            text-align: center;
+            color: #5183f5;
+            font-size: 1.4rem;
+            font-weight: 500;
+            @media #{$maxMobile} {
+               grid-column: span 1;
+            }
+            @media #{$maxMiniSmall} {
+               grid-column: span 12;
+            } 
+         }
+      }
+      .article_section {
+         margin: 3em 0;
+      }
+   }
+}

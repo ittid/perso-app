@@ -1,0 +1,60 @@
+.about {
+   @media #{$maxMobile} {
+      text-align: center;
+   }
+   .content {
+      margin: 0 auto !important;
+      h1 {
+         font-size: 2.4em;
+         line-height: 1.5;
+         margin: 0;
+      }
+      p {
+         line-height: 1.7;
+         color: #454545;
+      }
+      .info {
+         h2 {
+            border-bottom: 1px solid #ebebeb;
+            margin-top: 3rem;
+            font-size: 1.9em;
+            @media #{$maxMobile} {
+               border: 0;
+            }
+         }
+         p {
+            color: #454545;
+         }
+         ul {
+            margin: 0;
+            padding: 0;
+            li {
+               position: relative;
+               list-style: none;
+               &:before {
+                  content: "";
+                  height: 2px;
+                  width: 9px;
+                  background-color: #bbbebe;
+                  position: absolute;
+                  top: 12px;
+                  left: -25px;
+                  @media #{$maxMobile} {
+                     content: none;
+                  }
+               }
+               a {
+                  width: 100%;
+                  color: $linkColor;
+                  text-decoration: none;
+                  text-transform: capitalize;
+                  &:hover {
+                     opacity: .95;
+                  }
+               }
+            }
+         }
+      }
+   }
+
+}

@@ -1,0 +1,15 @@
+body {
+   background-color: $whiteColor;
+   color: $headingColor;
+   font-size: 1rem;
+   line-height: 1.5;
+   #app {
+      font-family: "Inter";
+   }
+}
+
+// Add Prefixes To Root Html Element
+* {
+	@include prefixes(box-sizing, border-box, webkit moz o ms);
+}
+

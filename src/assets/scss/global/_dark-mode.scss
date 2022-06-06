@@ -1,0 +1,173 @@
+body.dark {
+   background: $dark;
+   color: $whiteColor;
+   .nav {
+      background-color: $dark;
+      &.dark {
+         background-color: $dark;
+      }
+      .brand {
+         a {
+            color: $whiteColor;
+         }
+      }
+      .links {
+         ul {
+            a {
+               color: #798499;
+               &:hover {
+                  color: #b3b9c5;
+                  background-color: rgba(0, 0, 0, 0.2);
+               }
+            }
+         }
+      }
+   }
+   #main-content {
+      .lead {
+         .elevator {
+            .social {
+               a {
+                  &:hover {
+                     background-color: transparent;
+                     color: $linkColor;
+                     opacity: 0.85;
+                  }
+               }
+            }
+            p {
+               color: #b3b9c5;
+            }
+         }
+         .newsletter-section {
+            background: #1d1d1d;
+            box-shadow: none;
+            .button {
+               background-color: $dark;
+            }
+         }
+      }
+      .content {
+         > h2 {
+            color: $whiteColor;
+         }
+         .btn.view_all {
+            color: #020202;
+            background-color: #333;
+         }
+         .posts {
+            .post_cont:not(:first-child) {
+               border-top: 1px solid transparent;
+            }
+            .each {
+               background: #1d1d1d;
+               &:hover {
+                  background: #333333ab;
+               }
+               .title {
+                  h2 {
+                     color: #9fa39c;
+                  }
+                  .datetime {
+                     color: #9fa39c8f;
+                  }
+               }
+               .category {
+                  .label {
+                     background: $dark;
+                  }
+               }
+            }
+         }
+         .project {
+            .each {
+               &:not(:last-of-type) {
+                  border-bottom: 1px solid #1d1d1d;
+               }
+               .project-link {
+                  color: #9fa39c;
+               }
+               p {
+                  color: #9fa39c8f;
+               }
+               .prj {
+                  background: #1d1d1d;
+                  &:hover {
+                     background-color: #1d1d1dad;
+                  }
+               }
+            }
+         }
+      }
+   }
+   .footer {
+      .links {
+         ul {
+            a {
+               color: #798499;
+               &:hover {
+                  color: #b3b9c5;
+               }
+            }
+         }
+      }
+      .resource {
+         a {
+            color: $whiteColor;
+         }
+      }
+   }
+   .about {
+      .content {
+         h1 {
+            color: #eee;
+         }
+         p {
+            color: #b3b9c5;
+         }
+         .info {
+            h2 {
+               color: #ffd479;
+               border: none;
+            }
+         }
+      }
+   }
+   .newsletter {
+      .content {
+         h1 {
+            color: #eee;
+         }
+         p {
+            color: #b3b9c5;
+         }
+         .subscribe_area {
+            .input_email {
+               background: #333;
+               border-color: #505050;
+            }
+            .sub-button {
+               border: 1px solid #505050;
+               background: rgb(26, 26, 26);
+            }
+         }
+      }
+   }
+   .article_page {
+      .content {
+         h1 {
+            color: #eee;
+         }
+         .categories {
+            a {
+               background: rgb(26, 26, 26);
+               font-weight: 500;
+            }
+         }
+         .search_ipt {
+            border-color: #505050;
+            background: #333;
+         }
+      }
+   }
+}
